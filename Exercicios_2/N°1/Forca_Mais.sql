@@ -1,0 +1,1 @@
+select * from tb_personagem where forca > 2000;
