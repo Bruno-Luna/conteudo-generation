@@ -16,6 +16,3 @@ INSERT INTO tb_classe (localidade, nivel, elemento) VALUES ("Brasil", 5, "Água"
 INSERT INTO tb_classe (localidade, nivel, elemento) VALUES ("Alemanha", 3, "Fogo");
 INSERT INTO tb_classe (localidade, nivel, elemento) VALUES ("Itália", 2, "Ar");
 INSERT INTO tb_classe (localidade, nivel, elemento) VALUES ("México", 1, "Luz");
-
-
-

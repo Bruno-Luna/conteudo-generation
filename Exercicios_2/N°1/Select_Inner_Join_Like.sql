@@ -1,3 +1,3 @@
-select * from tb_classe
-	inner join tb_personagem on tb_classe.id = tb_personagem.classe_id
-where classe like "%fogo%";
+select * from tb_personagem
+	inner join tb_classe on tb_classe.id = tb_personagem.classe_id
+where elemento like "%fogo%";
