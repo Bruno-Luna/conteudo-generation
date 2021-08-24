@@ -1,6 +1,6 @@
 
 
-<img src="C:\Users\usuario\Desktop\Generation\Bloco II\Conteudo_Pratico\conteudo-generation\img\generation.png" style="zoom:50%;" />
+<img src="https://github.com/Bruno-Luna/conteudo-generation/blob/master/img/generation.png" style="zoom:50%;" />
 
 
 
@@ -55,6 +55,6 @@ Em todos os trabalhos, existem habilidades essenciais que ajudarão você a ter 
 
 |        **Aluno:** Bruno Luna da Silva - **Turma** 29         |
 | :----------------------------------------------------------: |
-| <img src="C:\Users\usuario\Desktop\Generation\Bloco II\Conteudo_Pratico\conteudo-generation\img\br-luna.jpg" style="zoom:33%;" /> |
+| <img src="https://github.com/Bruno-Luna/conteudo-generation/blob/master/img/br-luna.jpg" style="zoom:33%;" /> |
 
  
