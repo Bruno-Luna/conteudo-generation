@@ -6,6 +6,17 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.validation.constraints.NotBlank;
 
+
+/**
+ * Classe utilizada como Entidade no Banco de dados para Postagem, a mesma possui
+ * atributos que seram colunas no banco com titulo: titulo, descrição.
+ * 
+ * @author Turma29
+ * 
+ * @since 1.0
+ *
+ */
+
 @Entity
 public class Postagem {
 
