@@ -55,6 +55,6 @@ Em todos os trabalhos, existem habilidades essenciais que ajudarão você a ter 
 
 |        **Aluno:** Bruno Luna da Silva - **Turma** 29         |
 | :----------------------------------------------------------: |
-| <img src="https://github.com/Bruno-Luna/conteudo-generation/blob/master/img/br-luna.jpg" style="zoom:33%;" /> |
+| <img src="https://github.com/Bruno-Luna/conteudo-generation/blob/master/img/br-luna.jpg" style="zoom:20%;" /> |
 
  
