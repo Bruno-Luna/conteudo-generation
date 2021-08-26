@@ -1,16 +1,21 @@
+<h1 align= "center">
+
+<img src="https://github.com/Bruno-Luna/conteudo-generation/blob/master/img/generation.png" style="zoom:22%;" />
+
+</h1>
 
 
-<img src="https://github.com/Bruno-Luna/conteudo-generation/blob/master/img/generation.png" style="zoom:50%;" />
+# BOOTCAMP: PESSOA DESENVOLVEDORA WEB
 
 
-
-## BOOTCAMP: PESSOA DESENVOLVEDORA WEB
+## Índice
+- [Habilidades Técnicas](#-Habilidades-Técnicas)
+- [Habilidades Comportamentais](#-Habilidades-Comportamentais)
+- [Sobre mim](#-sobre-mim)
 
 ### HABILIDADES TÉCNICAS
 
-------
-
-Vamos ajudar você a aprender as habilidades técnicas para ser um desenvolvedor de sucesso com muitas sessões interativas e práticas.
+<hr>
 
 - Fundamentos de programação: variáveis, tipos de dados, códigos e sequências utilizados em programação
 - Estrutura de dados: princípios, estrutura e hierarquia de dados e programação orientada a objetos
@@ -19,11 +24,10 @@ Vamos ajudar você a aprender as habilidades técnicas para ser um desenvolvedor
 - Programação Avançada: Utilização de Java para desenvolvimento back-end e criação de APIs e utilização do framework Spring
 - Metodologia SCRUM: metodologia ágil para gestão e planejamento de projetos de desenvolvimento web
 
+
 ### HABILIDADES COMPORTAMENTAIS
 
-------
-
-Em todos os trabalhos, existem habilidades essenciais que ajudarão você a ter sucesso. Ajudaremos você a aprender como:
+<hr>
 
 - Coordenar e se comunicar com sua equipe e clientes
 
@@ -53,8 +57,18 @@ Em todos os trabalhos, existem habilidades essenciais que ajudarão você a ter 
 
   fonte: [Generation](https://brazil.generation.org/sao-paulo/pessoa-desenvolvedora-web/)
 
-|        **Aluno:** Bruno Luna da Silva - **Turma** 29         |
-| :----------------------------------------------------------: |
-| <img src="https://github.com/Bruno-Luna/conteudo-generation/blob/master/img/br-luna.jpg" style="zoom:20%;" /> |
+
+### SOBRE MIM
+<br>
+Bruno Luna da Silva, 30 anos - Aluno de Desenvolvimento FullStack Java pela Generation. 
+
+<img src="https://github.com/Bruno-Luna/conteudo-generation/blob/master/img/br-luna.jpg" style="zoom:20%;" />
+<br>
+ <a href="https://www.linkedin.com/in/bruno-luna-11590720a/" alt="Linkedin">
+<br>
+<img src="https://img.shields.io/badge/-Linkedin-1C1C1C?style=for-the-badge&logo=Linkedin&logoColor=00FFFF&link=https://www.linkedin.com/in/bruno-luna-11590720a/"/>
+  </a>
+
+
 
  
