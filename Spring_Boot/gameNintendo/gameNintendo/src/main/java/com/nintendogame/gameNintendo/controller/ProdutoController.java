@@ -45,10 +45,14 @@ public class ProdutoController {
 	
 	@GetMapping("/buscar_por_nome/{nomeProd}")
 	public ResponseEntity<List<ProdutoModel>> buscarPorNome(@PathVariable(value = "nomeProd") String nome){
-		return ResponseEntity.status(200).body(repository.findAllByNomeContainingIgnoreCase(nome));
+		
+		List<ProdutoModel> objetoProduto = repository.findAllByNomeContainingIgnoreCase(nome);
+			if(objetoProduto.isEmpty()) {
+				return ResponseEntity.status(204).build();
+			} else {
+				return ResponseEntity.status(200).body(objetoProduto);
+			}
 	}
-
-	// fazer o tratamento com if/else retornando os status HTTP
 
 	@PostMapping("/postar_produto")
 	public ResponseEntity<ProdutoModel> postarProduto(@Valid @RequestBody ProdutoModel salvarProduto){

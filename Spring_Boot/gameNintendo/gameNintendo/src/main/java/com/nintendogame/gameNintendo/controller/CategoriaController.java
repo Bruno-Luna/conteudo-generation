@@ -45,9 +45,13 @@ public class CategoriaController {
 	
 	@GetMapping("/buscar_por_descricao/{desc}")
 	public ResponseEntity<List<CategoriaModel>> buscarPorDescricao(@PathVariable (value = "desc") String descricao){
-		return ResponseEntity.status(200).body(repository.findAllByDescricaoContainingIgnoreCase(descricao));
+		List<CategoriaModel> objetoCategoria = repository.findAllByDescricaoContainingIgnoreCase(descricao);
+		if(objetoCategoria.isEmpty()) {
+			return ResponseEntity.status(204).build();
+		}else {
+			return ResponseEntity.status(204).body(objetoCategoria);
+		}
 	}
-	// fazer o tratamento com if/else retornando os status HTTP
 	
 	@PostMapping("/postar_categoria")
 	public ResponseEntity<CategoriaModel> postarCategoria(@Valid @RequestBody CategoriaModel salvarCategoria){
