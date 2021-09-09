@@ -1,6 +1,7 @@
 package com.generation.blogPessoal_II.controller;
 
 import java.util.List;
+import java.util.Optional;
 
 import javax.validation.Valid;
 
@@ -33,14 +34,13 @@ public class PostagemController {
 		return ResponseEntity.ok(repository.findAll());
 	}
 
-	@GetMapping("/{id}")
-	public ResponseEntity<PostagemModel> getById(@PathVariable Long id){
-		return repository.findById(id).map(resp -> ResponseEntity.ok(resp))
-				.orElse(ResponseEntity.notFound().build());
+	@GetMapping("/buscarPorId{id}")
+	public ResponseEntity<Optional<PostagemModel>> getById(@PathVariable(value = "id") Long id){
+		return ResponseEntity.ok().body(repository.findById(id));
 	}
 	
-	@GetMapping("/titulo/{titulo}")
-	public ResponseEntity<List<PostagemModel>> getByPostagem(@PathVariable String titulo){
+	@GetMapping("/buscarPorTitulo/{titulo}")
+	public ResponseEntity<List<PostagemModel>> getByPostagem(@PathVariable(value = "titulo") String titulo){
 		return ResponseEntity.ok(repository.findAllByTituloContainingIgnoreCase(titulo));
 	}
 	
@@ -49,9 +49,15 @@ public class PostagemController {
 		return ResponseEntity.status(HttpStatus.CREATED).body(repository.save(postagem));
 	}
 	
-	@PutMapping("/atualizar")
-	public ResponseEntity<PostagemModel> atualizar(@Valid @RequestBody PostagemModel postagemAtualizar){
-		return ResponseEntity.status(201).body(repository.save(postagemAtualizar));
+	@PutMapping("/atualizar/{comparar}")
+	public ResponseEntity<PostagemModel> atualizar(@RequestBody PostagemModel postagemAtualizar, @PathVariable(value = "comparar") Long comparar){
+		
+		if(repository.existsById(comparar) != false && comparar == postagemAtualizar.getIdPostagem()) {
+			
+			return ResponseEntity.status(201).body(repository.save(postagemAtualizar));
+		} else {
+			return ResponseEntity.status(204).build();
+		}
 	}
 	
 	@DeleteMapping("/deletar/{id_postagem}")
