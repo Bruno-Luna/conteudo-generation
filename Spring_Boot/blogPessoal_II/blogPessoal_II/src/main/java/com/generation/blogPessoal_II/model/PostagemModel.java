@@ -6,13 +6,25 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.validation.constraints.Size;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.sun.istack.NotNull;
+
+
+/**
+ * Classe utilizada como Entidade no Banco de dados para Postagem, a mesma
+ * possui atributos que serão colunas no banco com titulo: titulo e descricao.
+ * 
+ * @author Bruno Luna
+ * @since 1.0
+ */
 
 @Entity
 @Table(name = "postagem")
@@ -33,6 +45,15 @@ public class PostagemModel {
 	@Temporal(TemporalType.TIMESTAMP)
 	private Date data = new java.sql.Date(System.currentTimeMillis());
 	
+	@ManyToOne
+	@JoinColumn(name = "criador_id")
+	@JsonIgnoreProperties({"minhasPostagens"})
+	private UsuarioModel criador;
+	
+	@ManyToOne
+	@JoinColumn(name = "tema_id")
+	@JsonIgnoreProperties({"postagens"})
+	private TemaModel temaRelacionado;
 	
 	public Long getIdPostagem() {
 		return idPostagem;
