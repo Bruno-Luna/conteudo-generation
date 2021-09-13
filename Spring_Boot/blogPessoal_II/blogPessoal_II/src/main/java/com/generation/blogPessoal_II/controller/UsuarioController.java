@@ -19,7 +19,9 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.generation.blogPessoal_II.model.UsuarioModel;
+import com.generation.blogPessoal_II.model.utilities.UsuarioLogin;
 import com.generation.blogPessoal_II.repository.UsuarioRepository;
+import com.generation.blogPessoal_II.service.UsuarioService;
 
 @RestController
 @RequestMapping("/usuario")
@@ -28,6 +30,9 @@ public class UsuarioController {
 
 	@Autowired 
 	private UsuarioRepository repository;
+	
+	@Autowired
+	private UsuarioService servicos;
 
 	@GetMapping("/todos")
 	public ResponseEntity<List<UsuarioModel>> pegarTodos(){
@@ -35,8 +40,25 @@ public class UsuarioController {
 	}
 	
 	@PostMapping("/salvar")
-	public ResponseEntity<UsuarioModel> cadastrarUsuario(@Valid @RequestBody UsuarioModel novoUsuario){
-		return ResponseEntity.status(201).body(repository.save(novoUsuario));
+	public ResponseEntity<Object> cadastrarUsuario(@Valid @RequestBody UsuarioModel novoUsuario){
+		Optional<Object> objetoSalvar = servicos.cadastrarUsuario(novoUsuario);
+		
+		if (objetoSalvar.isEmpty()) {
+			return ResponseEntity.status(400).build();
+		}else {
+			return ResponseEntity.status(201).body(objetoSalvar.get());
+		}
+	}
+	
+	@PostMapping("/credenciais")
+	public ResponseEntity<Object> credenciais(@Valid @RequestBody UsuarioLogin usuarioAutenticar) {
+		Optional<?> objetoCredenciais = servicos.autenticador(usuarioAutenticar);
+
+		if (objetoCredenciais.isEmpty()) {
+			return ResponseEntity.status(400).build();
+		} else {
+			return ResponseEntity.status(201).body(objetoCredenciais.get());
+		}
 	}
 	
 	@PutMapping("/atualizar")
