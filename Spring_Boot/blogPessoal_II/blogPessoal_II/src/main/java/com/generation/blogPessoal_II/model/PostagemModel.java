@@ -81,6 +81,22 @@ public class PostagemModel {
 	}
 	public void setData(Date data) {
 		this.data = data;
+	}
+
+	public UsuarioModel getCriador() {
+		return criador;
+	}
+
+	public void setCriador(UsuarioModel criador) {
+		this.criador = criador;
+	}
+
+	public TemaModel getTemaRelacionado() {
+		return temaRelacionado;
+	}
+
+	public void setTemaRelacionado(TemaModel temaRelacionado) {
+		this.temaRelacionado = temaRelacionado;
 	};
 	
 }

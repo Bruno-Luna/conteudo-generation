@@ -43,6 +43,14 @@ public class UsuarioModel {
 	@JsonIgnoreProperties({"criador"})
 	private List<PostagemModel> minhasPostagens = new ArrayList<>();
 
+	public List<PostagemModel> getMinhasPostagens() {
+		return minhasPostagens;
+	}
+
+	public void setMinhasPostagens(List<PostagemModel> minhasPostagens) {
+		this.minhasPostagens = minhasPostagens;
+	}
+
 	public Long getIdUsuario() {
 		return idUsuario;
 	}

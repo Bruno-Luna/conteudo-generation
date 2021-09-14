@@ -50,7 +50,7 @@ public class UsuarioController {
 		}
 	}
 	
-	@PostMapping("/credenciais")
+	@PutMapping("/credenciais")
 	public ResponseEntity<Object> credenciais(@Valid @RequestBody UsuarioLogin usuarioAutenticar) {
 		Optional<?> objetoCredenciais = servicos.autenticador(usuarioAutenticar);
 

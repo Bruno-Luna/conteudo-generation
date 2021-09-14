@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.generation.blogPessoal_II.model.PostagemModel;
+import com.generation.blogPessoal_II.model.UsuarioModel;
 import com.generation.blogPessoal_II.repository.PostagemRepository;
 
 @RestController
@@ -35,8 +36,14 @@ public class PostagemController {
 	}
 
 	@GetMapping("/buscarPorId{id}")
-	public ResponseEntity<Optional<PostagemModel>> getById(@PathVariable(value = "id") Long id){
-		return ResponseEntity.ok().body(repository.findById(id));
+	public ResponseEntity<PostagemModel> getById(@PathVariable(value = "id") Long id){
+		Optional<PostagemModel> objetoUsuario = repository.findById(id);
+		if(objetoUsuario.isPresent()){
+			return ResponseEntity.status(200).body(objetoUsuario.get());
+		}else {
+			return ResponseEntity.status(204).build();
+		}
+		
 	}
 	
 	@GetMapping("/buscarPorTitulo/{titulo}")

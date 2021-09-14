@@ -51,4 +51,13 @@ public class TemaModel {
 	public void setTema(String tema) {
 		this.tema = tema;
 	}
+
+	public List<PostagemModel> getPostagens() {
+		return postagens;
+	}
+
+	public void setPostagens(List<PostagemModel> postagens) {
+		this.postagens = postagens;
+	}
+	
 }
