@@ -30,18 +30,29 @@ public class UsuarioModel {
 	@Id @GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long idUsuario;
 	
-	@NotBlank
+	@NotBlank(message = "O nome é Obrigatório")
 	private String nome;
 	
-	@NotBlank
+	@NotBlank(message = "O email é Obrigatório")
 	private String email;
 	
-	@NotBlank
+	@NotBlank(message = "A senha é Obrigatória")
 	private String senha;
 	
 	@OneToMany(mappedBy = "criador", cascade = CascadeType.REMOVE)
 	@JsonIgnoreProperties({"criador"})
 	private List<PostagemModel> minhasPostagens = new ArrayList<>();
+	
+
+	public UsuarioModel(Long idUsuario, String nome,  String email, String senha) {
+		
+		this.idUsuario = idUsuario;
+		this.nome = nome;
+		this.email = email;
+		this.senha = senha;
+	}
+	
+	public UsuarioModel() { }
 
 	public List<PostagemModel> getMinhasPostagens() {
 		return minhasPostagens;
