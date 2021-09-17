@@ -1,20 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contato</title>
-</head>
+    <link rel="stylesheet" href="style/style-contato.css">
+    <title>Aulas - Fundamentos_Web</title>
 
-    <ul>
-        <li>
-            <a href="index.html">Home</a>
-        </li>
-        <li>
-            <a href="contato.html">Contato</a>
-        </li>
-    </ul>
+</head>
+    <nav>
+        <div class="topo">
+            <ul>
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="contato.html">Contato</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
         <form>
                 <fieldset>
@@ -31,7 +37,7 @@
                     <input type="number">
                     <br>
                     <br>
-                    <label for="idade">Assunto:</label>
+                    <label for="idade">Selecione o assunto:</label>
                     <br>
                     <br>
                     <div>
@@ -45,20 +51,30 @@
                         <label for="louie">Elogios</label>
                     </div>
                     <br>
-                    <textarea name="" id="" cols="50" rows="10" placeholder="Digite sua mensagem aqui..."></textarea>
+                    <textarea  cols="50" rows="10" placeholder="Digite sua mensagem aqui..."></textarea>
                     <br>
                     <br>
-                    <button>Enviar</button> <button>Limpar</button>
+                    <button class="enviar">Enviar</button>
+                    <button class="limpar">Limpar</button>
                 </fieldset>
         </form>
 
-        <h2>Localização:</h2>
-        <p>Praça da Sé - Sé, São Paulo - SP, 01001-000</p>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14629.910876338476!2d-46.6343427!3d-23.5512802!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xfdb32e67a44103f5!2sCatedral%20Metropolitana%20de%20S%C3%A3o%20Paulo!5e0!3m2!1spt-BR!2sbr!4v1631814136477!5m2!1spt-BR!2sbr" width="400" height="250" style="border:0;" allowfullscreen="" loading="lazy">
-        </iframe>
+        <div class="mapa">
+            <div class="mapa-titulo">
+                <h2>Localização:</h2>
+            </div>
+
+            <div class="mapa-local">
+                <p>Praça da Sé - Sé, São Paulo - SP, 01001-000</p>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14629.910876338476!2d-46.6343427!3d-23.5512802!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xfdb32e67a44103f5!2sCatedral%20Metropolitana%20de%20S%C3%A3o%20Paulo!5e0!3m2!1spt-BR!2sbr!4v1631814136477!5m2!1spt-BR!2sbr" width="450" height="300" style="border:0;" allowfullscreen="" loading="lazy">
+                </iframe>
+            </div>
+        </div>
 
         <footer>
-            <p>Desenvolvido por: <a href="https://www.linkedin.com/in/bruno-luna-11590720a/">Bruno Luna</a></p>
+            <p>Desenvolvido com <span>❤</span>  por:
+                <a href="https://github.com/Bruno-Luna" target="_blank">Bruno Luna </a> 
+            </p>
         </footer>
 </body>
 
