@@ -13,6 +13,6 @@ public class UsuarioServicos {
 	private @Autowired UsuarioRepositorio repositorio;
 	
 	public Optional<Usuario> cadastrarUsuario(Usuario novoUsuario){
-		return repositorio.findByEmail(novoUsuario)
+		return repositorio.findByEmail(novoUsuario);
 	}
 }

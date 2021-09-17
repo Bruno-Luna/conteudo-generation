@@ -23,6 +23,10 @@ import com.generation.blogPessoal_II.model.utilities.UsuarioLogin;
 import com.generation.blogPessoal_II.repository.UsuarioRepository;
 import com.generation.blogPessoal_II.service.UsuarioService;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+import io.swagger.annotations.ApiResponses;
+
 @RestController
 @RequestMapping("/usuario")
 @CrossOrigin("*")
@@ -33,11 +37,17 @@ public class UsuarioController {
 	
 	@Autowired
 	private UsuarioService servicos;
+	
 
 	@GetMapping("/todos")
 	public ResponseEntity<List<UsuarioModel>> pegarTodos(){
-		return ResponseEntity.ok(repository.findAll());
-	}
+		List<UsuarioModel> objetoLista = repository.findAll();
+
+		if (objetoLista.isEmpty()) {
+			return ResponseEntity.status(204).build();
+		} else {
+			return ResponseEntity.status(200).body(objetoLista);
+		}	}
 	
 	@PostMapping("/salvar")
 	public ResponseEntity<Object> cadastrarUsuario(@Valid @RequestBody UsuarioModel novoUsuario){

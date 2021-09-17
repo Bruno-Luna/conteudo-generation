@@ -97,6 +97,7 @@ public class PostagemModel {
 
 	public void setTemaRelacionado(TemaModel temaRelacionado) {
 		this.temaRelacionado = temaRelacionado;
-	};
+	}
+
 	
 }
