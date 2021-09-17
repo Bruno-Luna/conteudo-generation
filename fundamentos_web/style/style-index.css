@@ -1,0 +1,138 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-color: #14213d;
+    height: 100%
+}
+
+
+/* TOPO */
+
+nav .topo ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 14vh;
+    background-color: #000000;
+    margin-top: 0;
+}
+
+nav .topo ul li{
+    list-style: none;
+    
+}
+
+nav .topo ul li a{
+    color: #fca311;
+    text-decoration: none;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+nav .topo ul li a:hover{
+    border-bottom: 1px solid #e5e5e5;
+}
+
+/*  SEÇÃO 1 */
+
+section .titulo{
+    width: 30%;
+    text-align: center;
+    margin-top: 3rem;
+    color: #e5e5e5;
+}
+
+section .titulo h3{
+    font-weight: 300;
+}
+
+
+section .container{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 50vh;
+
+}
+
+section .sobre-mim{
+    width: 60%;
+    text-align: center;
+    font-size: 1.1rem;
+    color: #ffff;
+    padding: 0 4rem;
+    
+}
+
+section .sobre-mim .nome h1{
+    text-align: left;
+    font-weight: 300;
+    font-size: 2rem;
+
+}
+
+section .sobre-mim h3{
+    font-size: 1.6rem;
+    font-weight: 100;
+    letter-spacing: 3px;
+}
+
+section .sobre-mim p{
+    font-size: 1.4rem;
+
+}
+
+section .container .img img{
+    filter: drop-shadow(0 0 0.65rem #e5e5e5);
+
+}
+
+/* CONTEÚDO PRINCIPAL */
+
+section .container-main{
+    margin-top: 3rem;
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+}
+
+section .container-main h4{
+    color: #fca311;
+    font-size: 1.6rem;
+    font-weight: 200;
+}
+
+section .container-main .spfc img{
+    width: 500px; 
+    height: 300px;
+    filter: opacity(55%);
+}
+
+/* RODAPÉ */
+
+footer{
+    height: 8vh;
+    margin-top: 4rem;
+    background-color: hsl(221, 51%, 10%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer p{
+    color: #e5e5e5;
+}
+
+footer p span{
+    color: #ff0000;
+}
+
+footer p a{
+    color: #fca311;
+    text-decoration: none;
+    padding: 0 .4rem;
+}
+
+footer p a:hover{
+    color: #e5e5e5;
+}
