@@ -16,8 +16,9 @@ assunto.style.width = '100%'
 
 function validaNome(){
     let txtNome = document.querySelector('#txtNome')
-    if(nome.value.length < 3 || nome.value == Number){
-        txtNome.innerHTML = 'Nome invalido'
+    const regex = /[0-9]/;
+    if(nome.value.length < 3 || regex.test(nome.value) == true || nome.value[0] == " "){
+        txtNome.innerHTML = 'Nome inválido'
         txtNome.style.color = '#FF0000'
     }else{
         txtNome.innerHTML = 'Nome válido'
@@ -26,6 +27,31 @@ function validaNome(){
     }
 }
 
+//Outra forma de só aceitar letras no inputText 
+
+// function ApenasLetras(e, t) {
+//     try {
+//         if (window.event) {
+//             var charCode = window.event.keyCode;
+//         } else if (e) {
+//             var charCode = e.which;
+//         } else {
+//             return true;
+//         }
+//         if (
+//             (charCode > 64 && charCode < 91) || 
+//             (charCode > 96 && charCode < 123) ||
+//             (charCode > 191 && charCode <= 255) // letras com acentos 
+//             || (charCode == 32)
+//         ){
+//             return true;
+//         } else {
+//             return false;
+//         }
+//     } catch (err) {
+//         alert(err.Description);
+//     }
+// }
 
 function validaEmail(){
     let txtEmail = document.querySelector('#txtEmail')
