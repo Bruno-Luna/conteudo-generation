@@ -1,6 +1,5 @@
 <h1 align= "center">
 <img src="https://github.com/Bruno-Luna/conteudo-generation/blob/master/img/generation.png" width="40%" />
-
 </h1>
 <br>
 
@@ -8,8 +7,6 @@
 
 💻 BOOTCAMP: PESSOA DESENVOLVEDORA WEB 
 </h2>
-
-
 
 ### DESENVOLVEDOR JÚNIOR
 #### O QUE FAZ UM DESENVOLVEDOR JUNIOR?
@@ -68,7 +65,7 @@ Responsabilidade comuns:
 
 - Trabalho em equipe
 
-- Proatividade
+- Pro atividade
 
 - Comunicação
 
@@ -82,10 +79,12 @@ Responsabilidade comuns:
 
 Bruno Luna da Silva, 30 anos.
 
-Aluno de Desenvolvimento FullStack Java pela Generation.
+Turma: 29
 
-<img src="https://github.com/Bruno-Luna/conteudo-generation/blob/master/img/br-luna.jpg" width="25%" />
- <a href="https://www.linkedin.com/in/bruno-luna-11590720a/" alt="Linkedin">
+Desenvolvedor FullStack Java Jr.
+
+<img src="https://avatars.githubusercontent.com/u/80595156?v=4" width="28%;"  />
+ <a href="https://www.linkedin.com/in/lunabr/" alt="Linkedin">
 <br>
 <img src="https://img.shields.io/badge/-Linkedin-1C1C1C?style=for-the-badge&logo=Linkedin&logoColor=00FFFF&link=https://www.linkedin.com/in/bruno-luna-11590720a/"/>
   </a>
